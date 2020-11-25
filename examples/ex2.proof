@@ -1,0 +1,25 @@
+3 = fx,  1 -x;
+4 * 3, -z + y*z, -z + fx*z + x*z + y*z - fx*y*z - x*y*z;
+5 + 1, 4, fx*z - fx*y*z;
+4 d;
+
+6 = fy,  1 - y;
+7 * 6, -fx*z, fy*fx*z - fx*z + y*fx*z;
+8 + 5, 7, fy*fx*z;
+7 d;
+
+9 = fa,  1 - a;
+10 * 9, z-1, -fa*z + z -a*z +fa - 1 + a;
+11 + 2, 10, fa - fa*z;
+10 d;
+
+12 * 8, fa, fa*fy*fx*z;
+13 * 11, fx*fy, fx*fy*fa - fa*fx*fy*z;
+14 + 12, 13, fx*fy*fa;
+
+15 * 3, fy*fa, -fx*fy*fa + fy*fa - x*fy*fa;
+16 + 14, 15, fy*fa - x*fy*fa;
+17 * 6, fa - x*fa, fa - fa*fy - fa*x + fa*fy*x - fa*y + fa*x*y;
+18 + 16, 17, fa - fa*x -fa*y + fa*x*y;
+19 * 9, 1 - x -y +x*y, 1 - a - fa - x + a*x + fa*x - y + a*y + fa*y + x*y - a*x*y - fa*x*y;
+20 + 18,19, 1 - a - x + a*x - y + a*y + x*y - a*x*y;
