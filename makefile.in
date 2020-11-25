@@ -1,0 +1,6 @@
+CC=@CC@
+CFLAGS=@CFLAGS@
+pacheck: pacheck.c makefile
+	$(CC) $(CFLAGS) -o $@ pacheck.c -lgmp
+clean:
+	rm -f pacheck makefile
